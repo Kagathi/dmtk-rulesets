@@ -1,0 +1,9 @@
+{
+  "name": "dmtk-rulesets-tools",
+  "private": true,
+  "type": "module",
+  "description": "CI validator deps for the dmtk-rulesets registry",
+  "dependencies": {
+    "fflate": "^0.8.2"
+  }
+}
