@@ -21,7 +21,7 @@
       "id": "dnd5e-basic",
       "name": "D&D 5e (basic)",
       "description": "D&D 5e-compatible mechanics: abilities, skills & saves as proficiency rosters, spell slots, a weapons table. Mechanics only — no rulebook text.",
-      "version": "1.7.2",
+      "version": "1.12.0",
       "kind": "ruleset",
       "license": {
         "id": "CC0-1.0",
@@ -29,9 +29,9 @@
       },
       "author": "DM Toolkit",
       "official": true,
-      "minAppVersion": "0.5.2",
-      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.7.2.dmtk",
-      "changelogExcerpt": "Initial registry publication (v1.7.2)."
+      "minAppVersion": "0.6.0",
+      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.12.0.dmtk",
+      "changelogExcerpt": "All twelve SRD classes on the sheet, the NPC stat-block template, and identity + derived fields (v1.12.0)."
     },
     {
       "id": "gurps-basic",
@@ -48,6 +48,26 @@
       "minAppVersion": "0.5.2",
       "file": "rulesets/gurps-basic/gurps-basic-1.7.1.dmtk",
       "changelogExcerpt": "Initial registry publication (v1.7.1)."
+    },
+    {
+      "id": "dnd5e-srd-content",
+      "name": "D&D 5e SRD content",
+      "description": "The complete SRD 5.2.1 content for the dnd5e-basic ruleset: conditions, actions, common rules, every spell, and the full bestiary. Attach to a D&D campaign.",
+      "version": "1.0.0",
+      "kind": "content",
+      "content": {
+        "profileId": "dnd5e-basic",
+        "minProfileVersion": "1.12.0"
+      },
+      "license": {
+        "id": "CC-BY-4.0",
+        "attribution": "This work includes material from the System Reference Document 5.2.1 (\"SRD 5.2.1\") by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+      },
+      "author": "DM Toolkit",
+      "official": true,
+      "minAppVersion": "0.6.0",
+      "file": "content/dnd5e-srd-content/dnd5e-srd-content-1.0.0.dmtk",
+      "changelogExcerpt": "Initial registry publication (v1.0.0)."
     }
   ]
 }
