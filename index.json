@@ -52,8 +52,8 @@
     {
       "id": "dnd5e-srd-content",
       "name": "D&D 5e SRD content",
-      "description": "The complete SRD 5.2.1 content for the dnd5e-basic ruleset: conditions, actions, common rules, every spell, and the full bestiary. Attach to a D&D campaign.",
-      "version": "1.0.0",
+      "description": "The complete SRD 5.2.1 content for the dnd5e-basic ruleset: conditions, actions, common rules, every spell, the full bestiary, all magic items, and mundane equipment. Attach to a D&D campaign.",
+      "version": "1.1.0",
       "kind": "content",
       "content": {
         "profileId": "dnd5e-basic",
@@ -65,9 +65,9 @@
       },
       "author": "DM Toolkit",
       "official": true,
-      "minAppVersion": "0.6.0",
-      "file": "content/dnd5e-srd-content/dnd5e-srd-content-1.0.0.dmtk",
-      "changelogExcerpt": "Initial registry publication (v1.0.0)."
+      "minAppVersion": "0.7.0",
+      "file": "content/dnd5e-srd-content/dnd5e-srd-content-1.1.0.dmtk",
+      "changelogExcerpt": "1.1.0: added all SRD magic items, mundane equipment, and DM-screen reference cards."
     }
   ]
 }
