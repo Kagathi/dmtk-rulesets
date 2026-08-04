@@ -1,8 +1,9 @@
 # Contributing to dmtk-rulesets
 
-> **Status:** community submissions (Phase B) open alongside DM Toolkit **v0.8.0**. Until
-> then, this document describes the process so you can prepare a submission — PRs opened
-> early will be parked politely, not rejected.
+> **Status: OPEN** — community submissions are accepted (since DM Toolkit v0.8.0). Tip:
+> the app's **Rulesets → Submit…** runs these checks locally and produces a ready-to-submit
+> file; note the app's import tools are currently labeled *alpha*, so give anything they
+> produced one extra proofread before submitting.
 
 Thanks for wanting to share your table's work. The short version: **export it from the
 app, check the license twice, open a PR with the template.** Everything below is detail.

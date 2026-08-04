@@ -52,9 +52,10 @@ run the exact same validation and license checks.
 
 ## Contributing
 
-Community submissions open alongside DM Toolkit **v0.8.0** ("The Community Door"). The
-process, the checklist, and what reviewers look for are in [CONTRIBUTING.md](CONTRIBUTING.md)
-— readable now, so you can have a package ready on opening day.
+Community submissions are **open** (since DM Toolkit v0.8.0, "The Community Door"). The
+process, the checklist, and what reviewers look for are in [CONTRIBUTING.md](CONTRIBUTING.md).
+In the app: **Rulesets → Submit…** runs the same checks reviewers will and hands you a
+ready-to-submit file.
 
 ---
 
