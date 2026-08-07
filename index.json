@@ -37,7 +37,7 @@
       "id": "gurps-basic",
       "name": "GURPS (basic)",
       "description": "GURPS-compatible mechanics: ST/DX/IQ/HT, derived characteristics, HP/FP pools, skills, traits, weapons & DR tables. Mechanics only.",
-      "version": "1.7.1",
+      "version": "1.8.0",
       "kind": "ruleset",
       "license": {
         "id": "CC0-1.0",
@@ -45,9 +45,9 @@
       },
       "author": "DM Toolkit",
       "official": true,
-      "minAppVersion": "0.5.2",
-      "file": "rulesets/gurps-basic/gurps-basic-1.7.1.dmtk",
-      "changelogExcerpt": "Initial registry publication (v1.7.1)."
+      "minAppVersion": "0.8.3",
+      "file": "rulesets/gurps-basic/gurps-basic-1.8.0.dmtk",
+      "changelogExcerpt": "Equipment is now a table (item · TL · LC · qty · weight · cost · notes · page-ref) so GURPS gear imports with full detail (v1.8.0)."
     },
     {
       "id": "dnd5e-srd-content",
