@@ -1,5 +1,10 @@
 # D&D 5e (basic)
 
+## 1.13.0
+
+- Armor Class is now surfaced as an encounter defense stat, so it shows at a glance on the DM's
+  combat-tracker rows and stat panels. Additive display hint only — no mechanics changed.
+
 ## 1.12.0
 
 - All twelve SRD classes' signature trackers now live on the sheet, revealed by the Class field
