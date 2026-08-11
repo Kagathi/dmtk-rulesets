@@ -34,9 +34,15 @@ app, check the license twice, open a PR with the template.** Everything below is
    books privately; the app refuses to export that content and we refuse it here. Don't
    re-type it into an "authored" pack either — reviewers know what the *Savage Worlds*
    core book reads like.
-4. **Closed content goes in as pointer cards** — title, book, page, a one-line summary in
+4. **OGL submissions: respect Product Identity.** OGL documents typically declare
+   **Product Identity** — reserved names (settings, characters, product lines) that may
+   **not** be redistributed even though the rules text may. Before submitting an
+   OGL-derived package, check the source's PI declaration and strip or rename reserved
+   terms from card titles and bodies. Reviewers check this against the source document;
+   PI violations are the one decline that isn't fixable paperwork.
+5. **Closed content goes in as pointer cards** — title, book, page, a one-line summary in
    your own words. Cite, don't copy.
-5. **Names are fine, marks are not.** "Compatible with X" is nominative use; calling your
+6. **Names are fine, marks are not.** "Compatible with X" is nominative use; calling your
    package X, using X's logo, or copying X's trade dress is not.
 
 ## Mechanical requirements (CI enforces these)
