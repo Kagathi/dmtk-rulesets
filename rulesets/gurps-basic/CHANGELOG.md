@@ -1,5 +1,11 @@
 # GURPS (basic)
 
+## 1.10.0
+
+- The Equipment and Weapons tables are now **item targets**: a catalog item can be added straight
+  into them, with its values landing in the right columns (TL, LC, weight, cost and the rest).
+  Additive declaration only — no mechanics changed, and nothing on an existing sheet moves.
+
 ## 1.9.0
 
 - Dodge, Parry, and DR are now surfaced as encounter defense stats, so they show at a glance on

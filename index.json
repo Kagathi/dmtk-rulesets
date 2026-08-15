@@ -21,7 +21,7 @@
       "id": "dnd5e-basic",
       "name": "D&D 5e (basic)",
       "description": "D&D 5e-compatible mechanics: abilities, skills & saves as proficiency rosters, spell slots, a weapons table. Mechanics only — no rulebook text.",
-      "version": "1.13.0",
+      "version": "1.14.0",
       "kind": "ruleset",
       "license": {
         "id": "CC0-1.0",
@@ -30,14 +30,14 @@
       "author": "DM Toolkit",
       "official": true,
       "minAppVersion": "0.6.0",
-      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.13.0.dmtk",
-      "changelogExcerpt": "Armor Class surfaced as an encounter defense stat on the combat tracker (v1.13.0)."
+      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.14.0.dmtk",
+      "changelogExcerpt": "The Weapons table and Inventory are now item targets, so catalog items can be added straight into them (v1.14.0)."
     },
     {
       "id": "gurps-basic",
       "name": "GURPS (basic)",
       "description": "GURPS-compatible mechanics: ST/DX/IQ/HT, derived characteristics, HP/FP pools, skills, traits, weapons & DR tables. Mechanics only.",
-      "version": "1.9.0",
+      "version": "1.10.0",
       "kind": "ruleset",
       "license": {
         "id": "CC0-1.0",
@@ -46,8 +46,8 @@
       "author": "DM Toolkit",
       "official": true,
       "minAppVersion": "0.8.3",
-      "file": "rulesets/gurps-basic/gurps-basic-1.9.0.dmtk",
-      "changelogExcerpt": "Dodge, Parry, and DR surfaced as encounter defense stats on the combat tracker (v1.9.0)."
+      "file": "rulesets/gurps-basic/gurps-basic-1.10.0.dmtk",
+      "changelogExcerpt": "The Equipment and Weapons tables are now item targets, so catalog items can be added straight into them (v1.10.0)."
     },
     {
       "id": "dnd5e-srd-content",

@@ -110,12 +110,35 @@ function validateDmtk(abs, entry) {
     fail(`entry "${entry.id}" profile.json has no attributes array`);
   }
 
-  // License gate (§4.2): reproduced rule TEXT (a card `body`) OR any monster
-  // needs a license.json in the .dmtk.
+  // License gate (§4.2): reproduced rule TEXT (a card `body`), any monster, OR any
+  // item needs a license.json in the .dmtk. An items table IS the book's rules text —
+  // its damage dice and costs are the part someone wrote and owns.
   const hasLicense = names.includes('license.json');
   const hasMonsters = names.some((n) => n.startsWith('monsters/'));
   if (hasMonsters && !hasLicense) {
     fail(`entry "${entry.id}" carries monsters but the .dmtk has no license.json`);
+  }
+  const itemFiles = names.filter((n) => n.startsWith('items/'));
+  if (itemFiles.length > 0 && !hasLicense) {
+    fail(`entry "${entry.id}" carries items but the .dmtk has no license.json`);
+  }
+  // Shape check for items (v0.10.0, channel #3). The registry can't resolve targets
+  // against the profile — that's the installing app's job, where the ruleset actually
+  // is — so this checks only what is decidable from the file: a stable slug, a name,
+  // and at least one target. An item that targets nothing lands nowhere.
+  for (const name of itemFiles) {
+    let item;
+    try {
+      item = JSON.parse(strFromU8(files[name]));
+    } catch {
+      fail(`entry "${entry.id}" ${name} is not valid JSON`);
+      continue;
+    }
+    if (!item.slug) fail(`entry "${entry.id}" ${name} has no slug (the id a re-install lands on)`);
+    if (!item.name) fail(`entry "${entry.id}" ${name} has no name`);
+    if (!item.targets || Object.keys(item.targets).length === 0) {
+      fail(`entry "${entry.id}" ${name} targets nothing — it would land nowhere`);
+    }
   }
   for (const name of names) {
     if (!name.startsWith('reference/')) continue;

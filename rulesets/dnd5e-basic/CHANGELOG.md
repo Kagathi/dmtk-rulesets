@@ -1,5 +1,11 @@
 # D&D 5e (basic)
 
+## 1.14.0
+
+- The Weapons table and Inventory are now **item targets**: a catalog item can be added straight
+  into them, with its values landing in the right columns. Additive declaration only — no
+  mechanics changed, and nothing on an existing sheet moves.
+
 ## 1.13.0
 
 - Armor Class is now surfaced as an encounter defense stat, so it shows at a glance on the DM's
