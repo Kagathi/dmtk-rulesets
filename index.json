@@ -21,7 +21,7 @@
       "id": "dnd5e-basic",
       "name": "D&D 5e (basic)",
       "description": "D&D 5e-compatible mechanics: abilities, skills & saves as proficiency rosters, spell slots, a weapons table. Mechanics only — no rulebook text.",
-      "version": "1.14.0",
+      "version": "1.15.0",
       "kind": "ruleset",
       "license": {
         "id": "CC0-1.0",
@@ -30,8 +30,8 @@
       "author": "DM Toolkit",
       "official": true,
       "minAppVersion": "0.6.0",
-      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.14.0.dmtk",
-      "changelogExcerpt": "The Weapons table and Inventory are now item targets, so catalog items can be added straight into them (v1.14.0)."
+      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.15.0.dmtk",
+      "changelogExcerpt": "The Weapons table gained Cost and Weight columns, so an SRD weapons table imports without losing columns (v1.15.0)."
     },
     {
       "id": "gurps-basic",

@@ -1,5 +1,12 @@
 # D&D 5e (basic)
 
+## 1.15.0
+
+- The Weapons table gained **Cost** and **Weight** columns, so the SRD's own weapons table
+  imports without losing two of its four columns. Text rather than numbers, because the book
+  writes "1 sp" and "2 lb." — the units are part of the value. Additive: existing weapon rows
+  simply have those cells empty.
+
 ## 1.14.0
 
 - The Weapons table and Inventory are now **item targets**: a catalog item can be added straight
