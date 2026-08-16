@@ -52,12 +52,12 @@
     {
       "id": "dnd5e-srd-content",
       "name": "D&D 5e SRD content",
-      "description": "The complete SRD 5.2.1 content for the dnd5e-basic ruleset: conditions, actions, common rules, every spell, the full bestiary, all magic items, and mundane equipment. Attach to a D&D campaign.",
-      "version": "1.1.0",
+      "description": "The complete SRD 5.2.1 content for the dnd5e-basic ruleset: conditions, actions, common rules, every spell, the full bestiary, and every weapon, armor and adventuring item as catalog gear. Attach to a D&D campaign.",
+      "version": "1.2.0",
       "kind": "content",
       "content": {
         "profileId": "dnd5e-basic",
-        "minProfileVersion": "1.12.0"
+        "minProfileVersion": "1.14.0"
       },
       "license": {
         "id": "CC-BY-4.0",
@@ -65,9 +65,9 @@
       },
       "author": "DM Toolkit",
       "official": true,
-      "minAppVersion": "0.7.0",
-      "file": "content/dnd5e-srd-content/dnd5e-srd-content-1.1.0.dmtk",
-      "changelogExcerpt": "1.1.0: added all SRD magic items, mundane equipment, and DM-screen reference cards."
+      "minAppVersion": "0.10.0",
+      "file": "content/dnd5e-srd-content/dnd5e-srd-content-1.2.0.dmtk",
+      "changelogExcerpt": "Equipment is now catalog gear as well as reference cards — pick it onto a sheet, stock a shop with it, drop it as loot."
     }
   ]
 }
