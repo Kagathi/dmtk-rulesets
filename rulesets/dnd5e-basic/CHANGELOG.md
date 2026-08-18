@@ -1,5 +1,15 @@
 # D&D 5e (basic)
 
+## 1.16.0
+
+- **Ships D&D's own stat-block vocabulary**, so importing a creature from an SRD-shaped book
+  reads its hit points, AC and speed without anyone teaching the app what those words mean
+  first. Hit points arrive as a real pool, ready for the combat tracker. The rest of the block
+  — the ability rows, senses, languages, traits and actions — comes through as the creature's
+  description, unchanged. Additive: nothing on an existing sheet moves, and a DM who has
+  already taught their own mapping keeps it, because their answer always wins over the
+  ruleset's.
+
 ## 1.15.0
 
 - The Weapons table gained **Cost** and **Weight** columns, so the SRD's own weapons table
