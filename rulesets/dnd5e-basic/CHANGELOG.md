@@ -1,5 +1,15 @@
 # D&D 5e (basic)
 
+## 1.17.0
+
+- **Ships a DM Screen**, so a new D&D campaign opens the screen already laid out instead of
+  offering an empty canvas. It's built from a real one: three reference panels the width of
+  a cardboard screen — the conditions, what you can do in combat, and the adventuring tables
+  (DCs, skills by ability, light, travel pace) — filled from the SRD reference cards the app
+  already installs. Under them sits the row paper can't do: live initiative, the party at a
+  glance, and a scratchpad. Every panel is editable, and a DM who has already arranged their
+  own screen keeps it untouched — the suggestion only ever seeds an empty one.
+
 ## 1.16.0
 
 - **Ships D&D's own stat-block vocabulary**, so importing a creature from an SRD-shaped book
