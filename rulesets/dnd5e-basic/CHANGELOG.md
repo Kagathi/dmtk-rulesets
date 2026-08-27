@@ -1,5 +1,14 @@
 # D&D 5e (basic)
 
+## 1.18.0
+
+- Declares its creature stat-block **presentation** (`statblock5e`) and the layout behind
+  it, so the classic block is something this ruleset asks for rather than something the app
+  hardcodes for D&D. Non-D&D rulesets get a presentation that suits them instead of a name over
+  six em-dashes.
+- The ability modifier now comes from this profile's own declared formula rather than from
+  arithmetic inside the app, so there is one owner for it.
+
 ## 1.17.0
 
 - **Ships a DM Screen**, so a new D&D campaign opens the screen already laid out instead of
