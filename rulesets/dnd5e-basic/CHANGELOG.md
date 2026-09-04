@@ -1,5 +1,14 @@
 # D&D 5e (basic)
 
+## 1.19.0
+
+- **A creature now carries hit points.** The NPC template declares an `hp` field, so importing
+  a person or a stat block reads the HP out of it and a creature added to the combat tracker
+  arrives with its hit points instead of zero. Monsters are unaffected — they have always kept
+  HP as a real pool, and the app leaves the duplicate off their editor.
+- Additive: nothing on an existing sheet moves, and a creature whose HP you typed by hand keeps
+  what you typed.
+
 ## 1.18.0
 
 - Declares its creature stat-block **presentation** (`statblock5e`) and the layout behind
