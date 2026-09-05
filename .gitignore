@@ -1,0 +1,4 @@
+# The validator's installed dependencies — tools/package.json + validate.mjs are the
+# tracked source; what `npm install` produces stays local.
+node_modules/
+tools/package-lock.json
