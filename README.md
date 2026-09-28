@@ -50,6 +50,35 @@ run the exact same validation and license checks.
   repo refuses it too. If you didn't author it and it isn't openly licensed, it doesn't
   belong in the library.
 
+## First-party rulesets built here
+
+Some of the official rulesets are authored in this repo rather than bundled into the app — a
+licensed-SRD sheet is a download, not a reason to ship an app update. Those keep their source
+beside the package it builds into:
+
+```
+rulesets/<id>/source/<id>.json      the profile source, edited by hand
+rulesets/<id>/<id>-<version>.dmtk   the package, built from it
+```
+
+Build one with:
+
+```bash
+node tools/pack.mjs rulesets/<id>/source/<id>.json
+node tools/validate.mjs
+```
+
+`pack.mjs` refuses to write a package that fails its checks, and refuses to overwrite a
+version that already exists — published versions are immutable, so a change means a version
+bump, never a rewrite of a file somebody may already have installed.
+
+**It is not a schema validator, and the gap is worth knowing about.** A ruleset bundled into
+the app is parsed at build time, so a malformed one cannot ship; one served from here is
+validated by the app at INSTALL, on the DM's machine, after they downloaded it. `validate.mjs`
+deliberately does not duplicate the app's schema (one copy, no drift), and `pack.mjs` only
+checks what needs no schema. **So run the profile through the app's own `rulesetProfileV1`
+before publishing** — from the app repo, which owns it.
+
 ## Contributing
 
 Community submissions are **open** (since DM Toolkit v0.8.0, "The Community Door"). The

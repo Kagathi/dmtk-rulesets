@@ -148,6 +148,22 @@
       "minAppVersion": "0.12.0",
       "file": "rulesets/generic/generic-1.3.0.dmtk",
       "changelogExcerpt": "A creature carries HIT POINTS: the NPC template declares an `hp` field, so importing a person or a stat block fills it in and a combatant reaches the tracker with hit points instead of zero (v1.3.0)."
+    },
+    {
+      "id": "daggerheart-srd",
+      "name": "Daggerheart (SRD)",
+      "description": "Daggerheart character sheet built from the Daggerheart SRD 2.0: the six traits, Hope and Stress, Armor Slots, domain-card loadout and vault, Experiences, and gold in handfuls, bags and chests. Mechanics only — no rule text, no card text, no setting.",
+      "version": "1.0.0",
+      "kind": "ruleset",
+      "license": {
+        "id": "Custom",
+        "attribution": "Sheet structure derived from the Daggerheart System Reference Document 2.0, published by Darrington Press as Public Game Content under the Darrington Press Community Gaming License. © 2026 Critical Role LLC. Mechanics only — this package contains no rule text, card text or setting material. Daggerheart is a trademark of Critical Role LLC; this is an unofficial, community-made sheet definition."
+      },
+      "author": "DM Toolkit",
+      "official": true,
+      "minAppVersion": "0.12.0",
+      "file": "rulesets/daggerheart-srd/daggerheart-srd-1.0.0.dmtk",
+      "changelogExcerpt": "First release: the full Daggerheart sheet in the system’s own shape, with the adversary stat block pre-taught so a bestiary imports without teaching the app its vocabulary first (v1.0.0)."
     }
   ]
 }
