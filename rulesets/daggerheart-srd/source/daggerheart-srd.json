@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "daggerheart-srd",
   "name": "Daggerheart (SRD)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "family": "daggerheart",
   "attributes": [
     {
@@ -275,89 +275,138 @@
       "key": "hp",
       "label": "Hit Points",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     },
     {
       "key": "stress",
       "label": "Stress",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     },
     {
       "key": "hope",
       "label": "Hope",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     },
     {
       "key": "armorSlots",
       "label": "Armor Slots",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     },
     {
       "key": "goldHandfuls",
       "label": "Gold — Handfuls",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     },
     {
       "key": "goldBags",
       "label": "Gold — Bags",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     },
     {
       "key": "goldChests",
       "label": "Gold — Chests",
       "hasMax": true,
-      "steps": [1],
+      "steps": [
+        1
+      ],
       "floor": 0
     }
   ],
+  "turnOrder": "free",
   "layout": [
     {
       "row": [
         {
           "section": "Character",
-          "items": ["class", "subclass", "ancestry", "community"]
+          "items": [
+            "class",
+            "subclass",
+            "ancestry",
+            "community"
+          ]
         },
         {
           "section": "Advancement",
-          "items": ["level", "tier", "proficiency"]
+          "items": [
+            "level",
+            "tier",
+            "proficiency"
+          ]
         }
       ]
     },
     {
       "section": "Traits",
-      "items": ["agility", "strength", "finesse", "instinct", "presence", "knowledge"],
+      "items": [
+        "agility",
+        "strength",
+        "finesse",
+        "instinct",
+        "presence",
+        "knowledge"
+      ],
       "display": "statline"
     },
     {
       "row": [
         {
           "section": "Defenses",
-          "items": ["evasion", "armorScore", "spellcastTrait"]
+          "items": [
+            "evasion",
+            "armorScore",
+            "spellcastTrait"
+          ]
         },
         {
           "section": "Damage Thresholds",
-          "items": ["armorBaseMajor", "armorBaseSevere", "thresholdMajor", "thresholdSevere"]
+          "items": [
+            "armorBaseMajor",
+            "armorBaseSevere",
+            "thresholdMajor",
+            "thresholdSevere"
+          ]
         }
       ]
     },
     {
       "section": "Tracks",
-      "items": ["hp", "stress", "hope", "armorSlots"]
+      "items": [
+        "hp",
+        "stress",
+        "hope",
+        "armorSlots"
+      ]
     },
     {
       "section": "Gold",
-      "items": ["goldHandfuls", "goldBags", "goldChests"]
+      "items": [
+        "goldHandfuls",
+        "goldBags",
+        "goldChests"
+      ]
     },
     {
       "box": {
@@ -365,7 +414,10 @@
         "children": [
           {
             "section": "Cards",
-            "items": ["loadout", "vault"]
+            "items": [
+              "loadout",
+              "vault"
+            ]
           }
         ]
       }
@@ -376,7 +428,11 @@
         "children": [
           {
             "section": "Carried",
-            "items": ["activeWeapons", "activeArmor", "inventory"]
+            "items": [
+              "activeWeapons",
+              "activeArmor",
+              "inventory"
+            ]
           }
         ]
       }
@@ -387,11 +443,18 @@
         "children": [
           {
             "section": "About",
-            "items": ["experiences", "background", "connections"]
+            "items": [
+              "experiences",
+              "background",
+              "connections"
+            ]
           },
           {
             "section": "Features",
-            "items": ["classFeatures", "notes"]
+            "items": [
+              "classFeatures",
+              "notes"
+            ]
           }
         ]
       }
@@ -469,6 +532,14 @@
       "description": "All rolls targeting you have advantage."
     }
   ],
+  "gmPools": [
+    {
+      "key": "fear",
+      "label": "Fear",
+      "max": 12,
+      "startPerPc": 1
+    }
+  ],
   "advancement": [],
   "rewards": {
     "inventory": "inventory",
@@ -486,7 +557,10 @@
         "Motives & Tactics",
         "Tier"
       ],
-      "standaloneLabels": ["Motives & Tactics", "Experience"],
+      "standaloneLabels": [
+        "Motives & Tactics",
+        "Experience"
+      ],
       "mapping": {
         "difficulty": {
           "kind": "data",

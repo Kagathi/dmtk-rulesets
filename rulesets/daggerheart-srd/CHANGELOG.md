@@ -9,6 +9,18 @@ the arithmetic between them. It carries no rule text, no card text and no settin
 Daggerheart is a trademark of Critical Role LLC; this is an unofficial, community-made
 sheet definition and is not endorsed by them.
 
+## 1.1.0
+
+**Needs DM Toolkit 0.13.0 or later.** Older versions keep seeing 1.0.0, which still works.
+
+- **Takes turns the way Daggerheart does — freely.** The encounter window drops its initiative
+  column and round counter, and your players stop seeing "on deck": the GM decides who has
+  the spotlight next, so nobody is promised a turn the table has not given them. Give anyone
+  the turn with the ▶ on their row.
+- **The GM's Fear, kept for you.** A counter in the encounter window and on the DM Screen. It
+  starts at **one Fear per PC in the party**, as the SRD says, stops at **twelve**, and carries
+  between sessions. It never reaches a player's phone.
+
 ## 1.0.0
 
 - **The sheet, in the system’s own shape** rather than a fantasy sheet with the words
