@@ -51,34 +51,17 @@ run the exact same validation and license checks.
   repo refuses it too. If you didn't author it and it isn't openly licensed, it doesn't
   belong in the library.
 
-## First-party rulesets built here
+## First-party rulesets that live only here
 
-Some of the official rulesets are authored in this repo rather than bundled into the app — a
-licensed-SRD sheet is a download, not a reason to ship an app update. Those keep their source
-beside the package it builds into:
+Some official rulesets are distributed from this library rather than bundled into the app — a
+DM downloads the ones they want. Their **source is kept in the DM Toolkit app repo**, where the
+app's own checks run against it on every change, and each package here is generated from it
+(`pnpm pack:registry`). So there is no source to edit in this repo: a change starts in the app,
+and arrives here as a new version.
 
-```
-rulesets/<id>/source/<id>.json      the profile source, edited by hand
-rulesets/<id>/<id>-<version>.dmtk   the package, built from it
-```
-
-Build one with:
-
-```bash
-node tools/pack.mjs rulesets/<id>/source/<id>.json
-node tools/validate.mjs
-```
-
-`pack.mjs` refuses to write a package that fails its checks, and refuses to overwrite a
-version that already exists — published versions are immutable, so a change means a version
-bump, never a rewrite of a file somebody may already have installed.
-
-**It is not a schema validator, and the gap is worth knowing about.** A ruleset bundled into
-the app is parsed at build time, so a malformed one cannot ship; one served from here is
-validated by the app at INSTALL, on the DM's machine, after they downloaded it. `validate.mjs`
-deliberately does not duplicate the app's schema (one copy, no drift), and `pack.mjs` only
-checks what needs no schema. **So run the profile through the app's own `rulesetProfileV1`
-before publishing** — from the app repo, which owns it.
+Published versions are immutable. A version that is superseded may be **delisted** from
+`index.json` (it stops appearing in Browse) while its file stays in place for anyone who already
+has it.
 
 ## Contributing
 

@@ -151,35 +151,19 @@
     },
     {
       "id": "daggerheart-srd",
-      "name": "Daggerheart (SRD)",
-      "description": "Daggerheart character sheet built from the Daggerheart SRD 2.0: the six traits, Hope and Stress, Armor Slots, domain-card loadout and vault, Experiences, and gold in handfuls, bags and chests. Mechanics only — no rule text, no card text, no setting.",
-      "version": "1.0.0",
+      "name": "DMTK Ruleset — Spotlight",
+      "description": "A ruleset for Daggerheart™ Compatible play, built from the Daggerheart SRD 2.0: the six traits, Hope and Stress, Armor Slots, the domain-card loadout and vault, Experiences, gold, free turn order and the GM's Fear. Mechanics only — no rules text.",
+      "version": "1.2.0",
       "kind": "ruleset",
       "license": {
-        "id": "Custom",
-        "attribution": "Sheet structure derived from the Daggerheart System Reference Document 2.0, published by Darrington Press as Public Game Content under the Darrington Press Community Gaming License. © 2026 Critical Role LLC. Mechanics only — this package contains no rule text, card text or setting material. Daggerheart is a trademark of Critical Role LLC; this is an unofficial, community-made sheet definition."
-      },
-      "author": "DM Toolkit",
-      "dmtk_official": true,
-      "minAppVersion": "0.12.0",
-      "file": "rulesets/daggerheart-srd/daggerheart-srd-1.0.0.dmtk",
-      "changelogExcerpt": "First release: the full Daggerheart sheet in the system’s own shape, with the adversary stat block pre-taught so a bestiary imports without teaching the app its vocabulary first (v1.0.0)."
-    },
-    {
-      "id": "daggerheart-srd",
-      "name": "Daggerheart (SRD)",
-      "description": "Daggerheart character sheet built from the Daggerheart SRD 2.0: the six traits, Hope and Stress, Armor Slots, domain-card loadout and vault, Experiences, and gold in handfuls, bags and chests. Mechanics only — no rule text, no card text, no setting.",
-      "version": "1.1.0",
-      "kind": "ruleset",
-      "license": {
-        "id": "Custom",
-        "attribution": "Sheet structure derived from the Daggerheart System Reference Document 2.0, published by Darrington Press as Public Game Content under the Darrington Press Community Gaming License. © 2026 Critical Role LLC. Mechanics only — this package contains no rule text, card text or setting material. Daggerheart is a trademark of Critical Role LLC; this is an unofficial, community-made sheet definition."
+        "id": "DPCGL-2.0",
+        "attribution": "This product includes materials from the Daggerheart System Reference Document 2.0, © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License. More information can be found at https://www.daggerheart.com. There are no previous modifications by others. Modified by DM Toolkit: the SRD 2.0 mechanics restructured into a character-sheet and adversary-template definition; no rules text is reproduced. License: https://darringtonpress.com/license. Unofficial — not endorsed by Darrington Press or Critical Role."
       },
       "author": "DM Toolkit",
       "dmtk_official": true,
       "minAppVersion": "0.13.0",
-      "file": "rulesets/daggerheart-srd/daggerheart-srd-1.1.0.dmtk",
-      "changelogExcerpt": "Takes turns freely and keeps the GM's Fear: no initiative column or round counter, no \"on deck\" on players' phones, and a Fear counter that starts at one per PC and stops at twelve (v1.1.0, needs DM Toolkit 0.13.0)."
+      "file": "rulesets/daggerheart-srd/daggerheart-srd-1.2.0.dmtk",
+      "changelogExcerpt": "Renamed for Darrington Press’s licence, with a one-line summary saying which game it plays; the full DPCGL attribution travels inside the file; condition reminders in our own words (v1.2.0)."
     }
   ]
 }
