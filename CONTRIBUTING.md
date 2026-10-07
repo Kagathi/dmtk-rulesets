@@ -7,6 +7,8 @@
 
 Thanks for wanting to share your table's work. The short version: **export it from the
 app, check the license twice, open a PR with the template.** Everything below is detail.
+Deciding what to build in the first place? [AUTHORING.md](AUTHORING.md) is the full
+vocabulary — everything a ruleset, extension, or content package can declare.
 
 ## What can be submitted
 

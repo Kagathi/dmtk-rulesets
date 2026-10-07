@@ -13,6 +13,7 @@ just says so; everything else keeps working.
 | Path | What it is |
 |---|---|
 | `index.json` | The manifest — the one file the app fetches first |
+| `AUTHORING.md` | The authoring guide — everything a package can declare, and what each piece does |
 | `rulesets/<id>/<id>-<version>.dmtk` | Rulesets and add-ons (extensions), versioned |
 | `content/<id>/<id>-<version>.dmtk` | Content packages (creatures, reference cards) for a ruleset |
 | `rulesets/<id>/CHANGELOG.md`, `content/<id>/CHANGELOG.md` | Per-package change notes, one section per version |
