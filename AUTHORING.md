@@ -61,7 +61,8 @@ never guesses a system's look from its shape.
   are set.
 - **`gmPools`** — resources the *GM* holds at campaign level, not a character: `key`,
   `label`, optional `max`, optional `start`, optional `startPerPc` (added per player
-  character — Daggerheart starts with 1 Fear per PC). Surfaced on the DM Screen and the
+  character — in Daggerheart™ Compatible play, the GM starts with 1 Fear per PC).
+  Surfaced on the DM Screen and the
   encounter window; the count persists across sessions. *Requires v0.13.0 or newer.*
 - **`advancement`** — named advancement tracks (XP, character points) DM grants accrue to.
 - **`rewards`** — where loot lands: the `inventory` attribute items append to, and which
