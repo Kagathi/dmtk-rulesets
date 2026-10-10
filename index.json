@@ -153,7 +153,7 @@
       "id": "daggerheart-srd",
       "name": "DMTK Ruleset — Spotlight",
       "description": "A ruleset for Daggerheart™ Compatible play, built from the Daggerheart SRD 2.0: the six traits, Hope and Stress, Armor Slots, the domain-card loadout and vault, Experiences, gold, free turn order and the GM's Fear. Mechanics only — no rules text.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "kind": "ruleset",
       "license": {
         "id": "DPCGL-2.0",
@@ -162,8 +162,8 @@
       "author": "DM Toolkit",
       "dmtk_official": true,
       "minAppVersion": "0.13.0",
-      "file": "rulesets/daggerheart-srd/daggerheart-srd-1.2.0.dmtk",
-      "changelogExcerpt": "Renamed for Darrington Press’s licence, with a one-line summary saying which game it plays; the full DPCGL attribution travels inside the file; condition reminders in our own words (v1.2.0)."
+      "file": "rulesets/daggerheart-srd/daggerheart-srd-1.3.0.dmtk",
+      "changelogExcerpt": "Hit Points, Stress and Armor Slots count up — marked, not left; Active Armor becomes a table with typed thresholds and weapons gain a Burden column; the loadout and vault take domain cards from the catalog; a suggested DM Screen (conditions, core rules, Fear, the party — no initiative); the unused Fear Features field is gone (v1.3.0)."
     }
   ]
 }

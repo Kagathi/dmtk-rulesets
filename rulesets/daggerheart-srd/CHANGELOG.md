@@ -9,6 +9,26 @@ others. Modified by DM Toolkit: the SRD 2.0 mechanics restructured into a charac
 adversary-template definition; no rules text is reproduced. License:
 https://darringtonpress.com/license. Unofficial — not endorsed by Darrington Press or Critical Role.
 
+## 1.3.0
+
+**Needs DM Toolkit 0.13.0 or later.**
+
+- **Hit Points, Stress and Armor Slots count up.** You mark them, so a fresh character or
+  adversary reads **0 marked**, damage marks and healing clears, and an untouched adversary no
+  longer looks maxed out.
+- **Active Armor is a table**: name, Major and Severe thresholds, score and feature, each in its
+  own column, and armor from the catalog can be added straight onto it. Anything typed into the
+  old Active Armor box stays saved on the character; it just isn't shown.
+- **Weapons gain a Burden column.**
+- **The Loadout and Vault take cards from the catalog**, ready for domain cards.
+- **A suggested DM Screen:** conditions, core rules, the Fear pool and the party, with no
+  initiative panel, because the game takes turns freely. The rules panels fill in once content is
+  installed.
+- The adversary template's unused **Fear Features** field is gone.
+
+*1.2.0 is delisted.* It stays in place for anyone who already has it, and an install of it sees
+1.3.0 as an update.
+
 ## 1.2.0
 
 **Needs DM Toolkit 0.13.0 or later.**
