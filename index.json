@@ -161,7 +161,7 @@
       },
       "author": "DM Toolkit",
       "dmtk_official": true,
-      "minAppVersion": "0.13.0",
+      "minAppVersion": "1.0.0",
       "file": "rulesets/daggerheart-srd/daggerheart-srd-1.3.0.dmtk",
       "changelogExcerpt": "Hit Points, Stress and Armor Slots count up — marked, not left; Active Armor becomes a table with typed thresholds and weapons gain a Burden column; the loadout and vault take domain cards from the catalog; a suggested DM Screen (conditions, core rules, Fear, the party — no initiative); the unused Fear Features field is gone (v1.3.0)."
     }

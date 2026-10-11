@@ -54,7 +54,7 @@ never guesses a system's look from its shape.
 - **`turnOrder`** — `'initiative'` (an order, rounds, the classic tracker) or `'free'`
   (no turn order exists in this system; the tracker hides its initiative column and round
   counter rather than asserting facts the system doesn't have). Absent means
-  `'initiative'`. Declared, never inferred. *Requires DM Toolkit v0.13.0 or newer.*
+  `'initiative'`. Declared, never inferred. *Requires DM Toolkit v1.0.0 or newer.*
 - **`initiativeHint`** — an attribute key that prefills a PC's initiative in the tracker
   (GURPS `basicSpeed`). A convenience, not a rule; the DM can always edit the value.
 - **`conditions`** — the status conditions the system defines, offered wherever statuses
@@ -63,7 +63,7 @@ never guesses a system's look from its shape.
   `label`, optional `max`, optional `start`, optional `startPerPc` (added per player
   character — in Daggerheart™ Compatible play, the GM starts with 1 Fear per PC).
   Surfaced on the DM Screen and the
-  encounter window; the count persists across sessions. *Requires v0.13.0 or newer.*
+  encounter window; the count persists across sessions. *Requires v1.0.0 or newer.*
 - **`advancement`** — named advancement tracks (XP, character points) DM grants accrue to.
 - **`rewards`** — where loot lands: the `inventory` attribute items append to, and which
   resource keys currency grants may target.

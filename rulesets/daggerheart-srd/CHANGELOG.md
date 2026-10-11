@@ -11,7 +11,7 @@ https://darringtonpress.com/license. Unofficial — not endorsed by Darrington P
 
 ## 1.3.0
 
-**Needs DM Toolkit 0.13.0 or later.**
+**Needs DM Toolkit 1.0.0 or later.**
 
 - **Hit Points, Stress and Armor Slots count up.** You mark them, so a fresh character or
   adversary reads **0 marked**, damage marks and healing clears, and an untouched adversary no
@@ -31,7 +31,7 @@ https://darringtonpress.com/license. Unofficial — not endorsed by Darrington P
 
 ## 1.2.0
 
-**Needs DM Toolkit 0.13.0 or later.**
+**Needs DM Toolkit 1.0.0 or later.**
 
 - **A new name.** Darrington Press's licence does not allow its game's name in the title of a
   work, so this ruleset is now **DMTK Ruleset — Spotlight**, and a one-line summary says which game it
@@ -43,7 +43,7 @@ https://darringtonpress.com/license. Unofficial — not endorsed by Darrington P
 - Mechanics unchanged from 1.1.0.
 
 *1.0.0 and 1.1.0 are delisted* — they stay in place for anyone who already has them, and an
-install of either sees 1.2.0 as an update in DM Toolkit 0.13.0.
+install of either sees 1.2.0 as an update in DM Toolkit 1.0.0.
 
 ## 1.1.0
 
