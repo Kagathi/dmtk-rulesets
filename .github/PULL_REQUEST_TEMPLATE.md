@@ -27,6 +27,7 @@
 - [ ] Attribution text is **verbatim** from the source and included in the package
 - [ ] Source of the licensed text (URL or publication): `<link/name>`
 - [ ] **I affirm this license permits redistribution of this text in this form, and that no part of this package is personal-use or purchased content.**
+- [ ] Cover (if any): it is art I may share, credited in `cover.json`, and it uses **none** of the game's marks, trade dress or book art
 
 ## Notes for the reviewer (optional)
 

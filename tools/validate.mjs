@@ -43,7 +43,9 @@ function validateEntry(entry) {
   if (!entry.license?.id) fail(`entry "${entry.id}" needs license.id`);
   const m = FILE_RE.exec(entry.file ?? '');
   if (!m) {
-    fail(`entry "${entry.id}" file "${entry.file}" must be <rulesets|content>/<id>/<id>-<version>.dmtk`);
+    fail(
+      `entry "${entry.id}" file "${entry.file}" must be <rulesets|content>/<id>/<id>-<version>.dmtk`
+    );
     return;
   }
   const [, dir, fileId, fileVer] = m;
@@ -71,6 +73,23 @@ function validateEntry(entry) {
   }
 }
 
+/** Cover art (v1.0.0 — ruleset-covers.md Q1): WebP, PNG or JPEG, at most 256 KB, by its bytes. */
+const COVER_FILES = ['cover.webp', 'cover.png', 'cover.jpg', 'cover.jpeg'];
+const COVER_MAX_BYTES = 256 * 1024;
+function coverType(b) {
+  const s = (i, n) => String.fromCharCode(...b.slice(i, i + n));
+  if (b.length > 12 && s(0, 4) === 'RIFF' && s(8, 4) === 'WEBP') return 'webp';
+  if (b.length > 8 && b[0] === 0x89 && s(1, 3) === 'PNG') return 'png';
+  if (b.length > 3 && b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff) return 'jpeg';
+  return null;
+}
+function coverProblem(bytes) {
+  if (bytes.length > COVER_MAX_BYTES)
+    return `is ${Math.ceil(bytes.length / 1024)} KB; the cap is 256 KB`;
+  if (!coverType(bytes)) return 'is not a WebP, PNG or JPEG image';
+  return null;
+}
+
 function validateDmtk(abs, entry) {
   let files;
   try {
@@ -80,9 +99,24 @@ function validateDmtk(abs, entry) {
     return;
   }
   const names = Object.keys(files);
-  // JSON-only: nothing but *.json rides the registry (covers reference/ + monsters/).
+  // JSON-only: nothing but *.json rides the registry (covers reference/ + monsters/) — with ONE
+  // exception, the cover art at the zip root (v1.0.0, ruleset-covers.md), checked below.
   for (const name of names) {
-    if (!name.endsWith('.json')) fail(`entry "${entry.id}" contains a non-JSON file: ${name}`);
+    if (!name.endsWith('.json') && !COVER_FILES.includes(name))
+      fail(`entry "${entry.id}" contains a non-JSON file: ${name}`);
+  }
+  const coverName = COVER_FILES.find((n) => names.includes(n));
+  if (coverName) {
+    const why = coverProblem(files[coverName]);
+    if (why) fail(`entry "${entry.id}" ${coverName}: ${why}`);
+    let meta;
+    try {
+      meta = names.includes('cover.json') ? JSON.parse(strFromU8(files['cover.json'])) : null;
+    } catch {
+      meta = null;
+    }
+    if (!meta || typeof meta.credit !== 'string' || !meta.credit.trim())
+      fail(`entry "${entry.id}" has a cover but no cover.json naming who made the art`);
   }
 
   // Root descriptor: profile.json for a ruleset/extension, content.json for a
@@ -177,6 +211,18 @@ if (!existsSync(indexPath)) {
         if (seen.has(key)) fail(`duplicate entry ${key}`);
         seen.add(key);
         validateEntry(entry);
+        // A cover beside the package (v1.0.0): present when the index says so, WebP, within the cap.
+        if (entry.hasCover === true && typeof entry.file === 'string') {
+          const beside = join(ROOT, entry.file.replace(/\.dmtk$/, '.cover.webp'));
+          if (!existsSync(beside)) fail(`entry ${key} says hasCover but ${beside} is missing`);
+          else {
+            const bytes = new Uint8Array(readFileSync(beside));
+            const why = coverProblem(bytes);
+            if (why) fail(`entry ${key} cover ${why}`);
+            else if (coverType(bytes) !== 'webp')
+              fail(`entry ${key} cover beside the package must be WebP`);
+          }
+        }
       }
     }
   }

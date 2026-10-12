@@ -59,7 +59,9 @@ vocabulary — everything a ruleset, extension, or content package can declare.
   ```
   cd tools && npm install && node validate.mjs
   ```
-- JSON only. Any HTML/script anywhere in the package fails validation.
+- JSON only — except one optional cover image at the zip root (`cover.webp`/`.png`/`.jpg`,
+  ≤ 256 KB, with a `cover.json` credit; see AUTHORING.md). Any HTML/script anywhere in the
+  package fails validation.
 - Extensions: `extends` names a base ruleset id + `minVersion`. Content packages:
   `content.json` names `profileId` + `minProfileVersion`. Test-install your package against
   that version in the app before submitting.

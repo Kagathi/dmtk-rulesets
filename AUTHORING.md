@@ -125,11 +125,38 @@ effective profile, and validates cross-references at merge time.
   against its declared minimum versions before submitting — it's the same validation
   your users will hit.
 
+## Cover art (app 1.0.0+)
+
+A ruleset can wear a cover on the DM's shelf and in the library. It is optional; without one,
+the app shows an initialed tile in the table's colours.
+
+- **Inside the package:** `cover.webp` (or `cover.png` / `cover.jpg`) at the zip root, plus
+  `cover.json`:
+  ```json
+  { "credit": "Banner art: Your Name", "license": "CC-BY-4.0" }
+  ```
+  `credit` is required — art is credited. `license` is the ART's license, when it has one.
+- **Its own credit, never the content's license.** `license.json` speaks for the game content;
+  a cover is art, and its `cover.json` says who made it. The library shows that line.
+- **Caps:** WebP, PNG or JPEG, at most **256 KB**, about **1200×600** (the card-banner ratio).
+  The app refuses the whole install of a package whose cover breaks these, with the reason.
+- **Beside the package:** the same picture as `<id>-<version>.cover.webp` next to the `.dmtk`
+  (WebP only, because of the name), and `"hasCover": true` with `"coverCredit"` on the index
+  entry. The library fetches it only when a DM is browsing.
+- **Never the game's marks.** No logos, trade dress or book art from the game a package plays —
+  for a Compatible-play package that is DPCGL §2.5/§6.4 territory, and it is true of every closed
+  system. Use your own art.
+- **A new cover is a new version.** Published files never change, pictures included: a cover-only
+  change is a patch bump with a one-line changelog ("new cover art").
+- A DM can set their own cover on an installed ruleset. It stays on their install, survives your
+  updates, and never leaves in an export — so you never need to worry about overwriting it.
+
 ## What can't be authored in a package
 
 Rule text in a profile (that's a content package's job) · sheet changes in a content
 package (that's a profile bump) · executable anything — no HTML, scripts, or styles
-beyond the token contract · external URLs of any kind · a look that fetches.
+beyond the token contract · external URLs of any kind · a look that fetches · any image other
+than the one cover at the zip root.
 
 ---
 
