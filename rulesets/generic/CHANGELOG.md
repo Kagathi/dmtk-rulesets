@@ -1,5 +1,12 @@
 # Generic
 
+## 1.4.0
+
+- **Condition bands.** The profile declares how a creature looks as it takes damage, read off
+  its Health: Unhurt, Hurt, Badly hurt, Down. A player whose table hides creature numbers sees
+  the word instead.
+- Additive. Needs app 1.0.0, which knows the field.
+
 ## 1.3.0
 
 - **A creature now carries hit points.** The NPC template declares an `hp` field (labelled

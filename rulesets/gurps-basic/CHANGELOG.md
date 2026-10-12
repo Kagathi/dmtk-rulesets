@@ -1,5 +1,12 @@
 # GURPS (basic)
 
+## 1.11.0
+
+- **Condition bands.** The profile declares how a creature looks as it takes damage, read off
+  its HP: Unhurt, Hurt, **Reeling** (less than 1/3 HP left), **Collapsing** (0 HP or less) —
+  GURPS Lite’s own thresholds. A player whose table hides creature numbers sees the word.
+- Additive. Needs app 1.0.0, which knows the field.
+
 ## 1.10.0
 
 - The Equipment and Weapons tables are now **item targets**: a catalog item can be added straight

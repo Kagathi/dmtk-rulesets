@@ -164,6 +164,54 @@
       "minAppVersion": "1.0.0",
       "file": "rulesets/daggerheart-srd/daggerheart-srd-1.3.0.dmtk",
       "changelogExcerpt": "Hit Points, Stress and Armor Slots count up — marked, not left; Active Armor becomes a table with typed thresholds and weapons gain a Burden column; the loadout and vault take domain cards from the catalog; a suggested DM Screen (conditions, core rules, Fear, the party — no initiative); the unused Fear Features field is gone (v1.3.0)."
+    },
+    {
+      "id": "dnd5e-basic",
+      "name": "D&D 5e (basic)",
+      "description": "D&D 5e-compatible mechanics: abilities, skills & saves as proficiency rosters, spell slots, a weapons table. Mechanics only — no rulebook text.",
+      "version": "1.20.0",
+      "kind": "ruleset",
+      "license": {
+        "id": "CC0-1.0",
+        "attribution": "DM Toolkit official ruleset"
+      },
+      "author": "DM Toolkit",
+      "dmtk_official": true,
+      "minAppVersion": "1.0.0",
+      "file": "rulesets/dnd5e-basic/dnd5e-basic-1.20.0.dmtk",
+      "changelogExcerpt": "CONDITION BANDS: a creature reads Unhurt, Hurt, Bloodied (half its hit points or fewer — the SRD’s own word) or Down, so players whose view hides creature numbers see how it looks instead (v1.20.0)."
+    },
+    {
+      "id": "generic",
+      "name": "Generic",
+      "description": "A minimal, system-agnostic character sheet — a starting point to duplicate and edit.",
+      "version": "1.4.0",
+      "kind": "ruleset",
+      "license": {
+        "id": "CC0-1.0",
+        "attribution": "DM Toolkit official ruleset"
+      },
+      "author": "DM Toolkit",
+      "dmtk_official": true,
+      "minAppVersion": "1.0.0",
+      "file": "rulesets/generic/generic-1.4.0.dmtk",
+      "changelogExcerpt": "CONDITION BANDS: a creature reads Unhurt, Hurt, Badly hurt or Down, so players whose view hides creature numbers see how it looks instead (v1.4.0)."
+    },
+    {
+      "id": "gurps-basic",
+      "name": "GURPS (basic)",
+      "description": "GURPS-compatible mechanics: ST/DX/IQ/HT, derived characteristics, HP/FP pools, skills, traits, weapons & DR tables. Mechanics only.",
+      "version": "1.11.0",
+      "kind": "ruleset",
+      "license": {
+        "id": "CC0-1.0",
+        "attribution": "DM Toolkit official ruleset"
+      },
+      "author": "DM Toolkit",
+      "dmtk_official": true,
+      "minAppVersion": "1.0.0",
+      "file": "rulesets/gurps-basic/gurps-basic-1.11.0.dmtk",
+      "changelogExcerpt": "CONDITION BANDS: a creature reads Unhurt, Hurt, Reeling (less than a third of its HP left) or Collapsing (0 HP or less), so players whose view hides creature numbers see how it looks instead (v1.11.0)."
     }
   ]
 }

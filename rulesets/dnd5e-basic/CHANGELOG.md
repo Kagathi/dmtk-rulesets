@@ -1,5 +1,12 @@
 # D&D 5e (basic)
 
+## 1.20.0
+
+- **Condition bands.** The profile declares how a creature looks as it takes damage, read off
+  its hit points: Unhurt, Hurt, **Bloodied** (half or fewer — the SRD’s own word and threshold),
+  Down. A player whose table hides creature numbers sees the word instead.
+- Additive. Needs app 1.0.0, which knows the field.
+
 ## 1.19.0
 
 - **A creature now carries hit points.** The NPC template declares an `hp` field, so importing
