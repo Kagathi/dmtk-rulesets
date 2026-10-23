@@ -23,6 +23,13 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { unzipSync, strFromU8 } from 'fflate';
+import {
+  WORLD_FILE_RE,
+  WORLD_GENRES,
+  entryFromManifest,
+  imageType,
+  readWorldFile,
+} from './world-rules.mjs';
 
 const ROOT = process.argv[2] ?? process.cwd();
 const errors = [];
@@ -224,6 +231,67 @@ if (!existsSync(indexPath)) {
           }
         }
       }
+    }
+  }
+}
+
+/**
+ * THE WORLDS LANE (app 1.1.0): `worlds.json`, its own file — never part of index.json, which every
+ * shipped app parses with a strict kind list. Absent is fine (no worlds yet). Each entry must point
+ * at its immutable file, the file must pass as a registry world (`world-rules.mjs`), the entry must
+ * say exactly what the file's own manifest says (pack-world writes it from there; a hand edit
+ * fails here), and the version needs its changelog section.
+ */
+const worldsPath = join(ROOT, 'worlds.json');
+if (existsSync(worldsPath)) {
+  let worlds;
+  try {
+    worlds = readJson(worldsPath);
+  } catch {
+    fail('worlds.json is not valid JSON');
+  }
+  if (worlds && !Array.isArray(worlds.entries)) fail('worlds.json has no "entries" array');
+  else if (worlds) {
+    const seen = new Set();
+    for (const entry of worlds.entries) {
+      const key = `world ${entry.id}@${entry.version}`;
+      if (seen.has(key)) fail(`duplicate ${key}`);
+      seen.add(key);
+      for (const field of ['id', 'name', 'version', 'license', 'file', 'contents', 'sizeBytes'])
+        if (entry[field] == null) fail(`${key} is missing "${field}"`);
+      if (entry.genre && !WORLD_GENRES.includes(entry.genre))
+        fail(`${key} genre "${entry.genre}" isn't one of: ${WORLD_GENRES.join(', ')}`);
+      const m = WORLD_FILE_RE.exec(entry.file ?? '');
+      if (!m) {
+        fail(`${key} file "${entry.file}" must be worlds/<id>/<id>-<version>.dmtkworld`);
+        continue;
+      }
+      if (m[1] !== entry.id || m[2] !== entry.version)
+        fail(`${key} file name (${m[1]}-${m[2]}) disagrees with its id and version`);
+      const abs = join(ROOT, entry.file);
+      if (!existsSync(abs)) {
+        fail(`${key} file not found: ${entry.file}`);
+        continue;
+      }
+      const { problems, manifest } = readWorldFile(new Uint8Array(readFileSync(abs)));
+      for (const p of problems) fail(`${key} ${p}`);
+      if (manifest) {
+        const want = entryFromManifest(manifest);
+        for (const [k, v] of Object.entries(want)) {
+          if (JSON.stringify(entry[k] ?? null) !== JSON.stringify(v ?? null))
+            fail(`${key} "${k}" says something its file's manifest doesn't — re-pack, never hand-edit`);
+        }
+      }
+      if (entry.hasCover === true) {
+        const beside = abs.replace(/\.dmtkworld$/, '.cover.webp');
+        if (!existsSync(beside)) fail(`${key} says hasCover but its .cover.webp is missing`);
+        else if (imageType(new Uint8Array(readFileSync(beside))) !== 'webp')
+          fail(`${key} cover must be WebP`);
+        if (!entry.coverCredit) fail(`${key} has a cover but no coverCredit`);
+      }
+      const changelog = join(dirname(abs), 'CHANGELOG.md');
+      if (!existsSync(changelog) || !readFileSync(changelog, 'utf8').includes(`## ${entry.version}`))
+        fail(`${key} needs a "## ${entry.version}" section in worlds/${entry.id}/CHANGELOG.md`);
     }
   }
 }
