@@ -151,6 +151,44 @@ the app shows an initialed tile in the table's colours.
 - A DM can set their own cover on an installed ruleset. It stays on their install, survives your
   updates, and never leaves in an export — so you never need to worry about overwriting it.
 
+## Worlds (app 1.1.0+)
+
+A world is a whole setting: pages, people, places, maps and images, a calendar. It's authored
+in the app and published as the `.dmtkworld` the app exports. Worlds live in their own index,
+`worlds.json`, beside `index.json` and never inside it: every installed app reads `index.json`
+with a strict list of package kinds, and a world entry there would break the library for all of
+them.
+
+**To publish one:**
+
+1. In the app, fill in the world's card on **World settings**: summary, genre and flavor,
+   author, license and its credit line, and content notes if any.
+2. **Export world file…** from the same page.
+3. In this repo: `node tools/pack-world.mjs <the file> --id <id> --version <x.y.z>`
+   (add `--official` for DM Toolkit's own; `--cover cover.webp --cover-credit "Name"` for cover
+   art; `--changelog "what's in this edition"`). The pack checks the file, copies it to
+   `worlds/<id>/<id>-<version>.dmtkworld`, writes its entry into `worlds.json` **from the file's
+   own manifest**, and adds the version's section to `worlds/<id>/CHANGELOG.md`.
+4. `node tools/validate.mjs`.
+
+**Never hand-edit a world's entry.** The validator compares every entry with its file's manifest
+and fails on any difference. To change a card, change it in the app, export, and pack a new
+version.
+
+**What a registry world must be:** at most 25 MB; images only (WebP, PNG or JPEG) beside its
+JSON; a license declared; a genre from the app's list (fantasy, sci-fi, horror, modern,
+historical, post-apocalyptic, superhero, other) or none; and nothing marked Personal use inside
+it. The license bar covers the prose **and** the art, and a world must be original: no published
+setting's names or maps.
+
+**Versions are immutable, and they tell DMs what changed:** patch = prose fixes, minor = new
+content, major = restructuring. A DM who has the world is offered the update and keeps every
+change they made to it.
+
+**Testing before you publish:** in the app, Settings → About → **For authors** → **Library
+source** → **Use a folder…**, and pick your copy of this repo. The library reads from it, with a
+banner saying so, until you switch back.
+
 ## What can't be authored in a package
 
 Rule text in a profile (that's a content package's job) · sheet changes in a content

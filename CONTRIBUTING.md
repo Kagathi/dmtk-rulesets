@@ -21,6 +21,11 @@ vocabulary — everything a ruleset, extension, or content package can declare.
   version.
 - **A content package** — creatures and/or reference cards for an existing ruleset. This is
   where licensing matters most, because it carries *text*.
+- **A world** *(not yet open to submissions)*: a whole setting, published as a `.dmtkworld` in
+  `worlds.json` (see AUTHORING.md, "Worlds"). The lane starts with DM Toolkit's own example world
+  only; community worlds open later, and this page will say when. The license bar below covers
+  a world's prose **and** its art, and a world must be original: no published setting's names
+  or maps.
 
 ## The license bar (the part reviewers are strictest about)
 
