@@ -176,9 +176,8 @@ and fails on any difference. To change a card, change it in the app, export, and
 version.
 
 **What a registry world must be:** at most 25 MB; images only (WebP, PNG or JPEG) beside its
-JSON; a license declared; a genre from the app's list (fantasy, sci-fi, horror, modern,
-historical, post-apocalyptic, superhero, other) or none; and nothing marked Personal use inside
-it. The license bar covers the prose **and** the art, and a world must be original: no published
+JSON; a license declared; a genre from the app's list (`tools/world-genres.json`, written
+from the app — never edited here) or none; and nothing marked Personal use inside it. The license bar covers the prose **and** the art, and a world must be original: no published
 setting's names or maps.
 
 **Versions are immutable, and they tell DMs what changed:** patch = prose fixes, minor = new
