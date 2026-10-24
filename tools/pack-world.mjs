@@ -79,7 +79,11 @@ const ordered = Object.fromEntries(
   ['id', 'name', 'summary', 'description', 'version']
     .filter((k) => k in entry)
     .map((k) => [k, entry[k]])
-    .concat(Object.entries(entry).filter(([k]) => !['id', 'name', 'summary', 'description', 'version'].includes(k)))
+    .concat(
+      Object.entries(entry).filter(
+        ([k]) => !['id', 'name', 'summary', 'description', 'version'].includes(k)
+      )
+    )
 );
 
 mkdirSync(dirname(dest), { recursive: true });

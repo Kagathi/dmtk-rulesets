@@ -1,0 +1,13 @@
+{
+  "note": "Written by the DM Toolkit app repo (pnpm registry:tools) from WORLD_GENRES in @dmtk/shared. Do not edit: change the app’s list and run the sync.",
+  "genres": [
+    "fantasy",
+    "sci-fi",
+    "horror",
+    "modern",
+    "historical",
+    "post-apocalyptic",
+    "superhero",
+    "other"
+  ]
+}

@@ -6,28 +6,24 @@
  * manifest by `pack-world.mjs` — one source — and the validator compares every published entry
  * back against its file's manifest, so a hand-edited mismatch fails.
  *
- * The genre roster below MIRRORS `WORLD_GENRES` in the app's `@dmtk/shared` (`worldCard.ts`). The
- * app's own schema refuses any other genre when it reads `worlds.json`, so a drift here would show
- * up as a world the app won't list — keep the two lists equal.
+ * THE GENRE LIST IS THE APP'S (the DM, 2026-10-24: one list, in the app, that these tools use).
+ * `world-genres.json` beside this file is WRITTEN by the app repo's `pnpm registry:tools` from
+ * `WORLD_GENRES` in `@dmtk/shared` (`worldCard.ts`), and the app's gate fails if the two differ.
+ * Never edit it here: change the app's list and run the sync.
  */
+import { readFileSync } from 'node:fs';
 import { unzipSync, strFromU8 } from 'fflate';
 
-export const WORLD_GENRES = [
-  'fantasy',
-  'sci-fi',
-  'horror',
-  'modern',
-  'historical',
-  'post-apocalyptic',
-  'superhero',
-  'other',
-];
+export const WORLD_GENRES = JSON.parse(
+  readFileSync(new URL('./world-genres.json', import.meta.url), 'utf8')
+).genres;
 
 /** A registry world is at most 25 MB — art is the whole size story. */
 export const WORLD_MAX_BYTES = 25 * 1024 * 1024;
 
 /** `worlds/<id>/<id>-<version>.dmtkworld`, the immutable address the app derives. */
-export const WORLD_FILE_RE = /^worlds\/([a-z0-9][a-z0-9.\-_]*)\/\1-([a-z0-9][a-z0-9.\-_]*)\.dmtkworld$/i;
+export const WORLD_FILE_RE =
+  /^worlds\/([a-z0-9][a-z0-9.\-_]*)\/\1-([a-z0-9][a-z0-9.\-_]*)\.dmtkworld$/i;
 
 export const worldFilePath = (id, version) => `worlds/${id}/${id}-${version}.dmtkworld`;
 

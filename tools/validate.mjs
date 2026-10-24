@@ -279,7 +279,9 @@ if (existsSync(worldsPath)) {
         const want = entryFromManifest(manifest);
         for (const [k, v] of Object.entries(want)) {
           if (JSON.stringify(entry[k] ?? null) !== JSON.stringify(v ?? null))
-            fail(`${key} "${k}" says something its file's manifest doesn't — re-pack, never hand-edit`);
+            fail(
+              `${key} "${k}" says something its file's manifest doesn't — re-pack, never hand-edit`
+            );
         }
       }
       if (entry.hasCover === true) {
@@ -290,7 +292,10 @@ if (existsSync(worldsPath)) {
         if (!entry.coverCredit) fail(`${key} has a cover but no coverCredit`);
       }
       const changelog = join(dirname(abs), 'CHANGELOG.md');
-      if (!existsSync(changelog) || !readFileSync(changelog, 'utf8').includes(`## ${entry.version}`))
+      if (
+        !existsSync(changelog) ||
+        !readFileSync(changelog, 'utf8').includes(`## ${entry.version}`)
+      )
         fail(`${key} needs a "## ${entry.version}" section in worlds/${entry.id}/CHANGELOG.md`);
     }
   }
