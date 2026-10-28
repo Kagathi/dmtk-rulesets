@@ -1,5 +1,15 @@
 # D&D 5e SRD content
 
+## 1.3.0
+
+- **Every creature carries its XP**, read from its own SRD stat block (not worked out from its
+  challenge rating — the SRD gives CR 12 as both 8,000 and 8,400). With dnd5e-basic 1.21.0, a
+  fight's difficulty is counted from it.
+- **Every weapon, armor and gear item carries its price** as a base price, the cost the SRD
+  prints (a longsword is 15 GP). A shop line starts from it, and an event can raise or lower it
+  at a table.
+- Needs app 1.1.0, which reads an item's price.
+
 ## 1.2.0
 
 - The equipment is now **catalog gear** as well as reference cards: every weapon, armor and

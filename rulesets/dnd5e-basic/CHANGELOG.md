@@ -1,5 +1,15 @@
 # D&D 5e (basic)
 
+## 1.21.0
+
+- **Encounter difficulty.** The profile declares the SRD's XP Budget per Character — Low,
+  Moderate and High for every level from 1 to 20, as the SRD prints them — and prices a foe by
+  its `xp`. A fight then reads Low, Moderate or High beside its name (Beyond High past them),
+  counted from the foes against the campaign's seated characters.
+- **XP on the stat block.** Creatures gain an **XP** field, shown under Languages and editable,
+  so a creature you make yourself can be priced too.
+- Additive. Needs app 1.1.0, which knows the field.
+
 ## 1.20.0
 
 - **Condition bands.** The profile declares how a creature looks as it takes damage, read off
